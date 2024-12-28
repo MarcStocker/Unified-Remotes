@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout onvolumeup="volume_up" onVolumeDown="volume_down">
+  <tabs>
+    <tab text="Media Control">
+      <!-- First Row -->
+      <row>
+        <button icon="back" ontap="back" onhold="escape" color="#ebaf00" /> <!-- Back/Return -->
+        <button icon="up" ontap="up" color="#0383DC" /> <!-- Up -->
+        <button icon="playpause" ontap="play_pause"  onhold="stop" color="#ebaf00" /> <!-- Play/Pause -->
+      </row>
+
+      <!-- Second Row -->
+      <row color="#0383DC">
+        <button icon="left" ontap="left" /> <!-- Left -->
+        <button icon="select" ontap="enter" /> <!-- Enter -->
+        <button icon="right" ontap="right" /> <!-- Right -->
+      </row>
+
+      <!-- Third Row -->
+      <row>
+        <button icon="rwd" ontap="skip_back"  color="#ebaf00" /> <!-- Skip Back -->
+        <button icon="down" ontap="down" color="#0383DC" /> <!-- Down -->
+        <button icon="ff" ontap="skip_forward"  color="#ebaf00" /> <!-- Skip Forward -->
+      </row>
+
+      <!-- Volume Section -->
+      <row weight="0.01">
+        <label id="vol_control_label" text="Volume Control" color="transparent" />
+      </row>
+      <row>
+          <button icon="vdown" ontap="volume_down" color="#50b9fe" /> <!-- Volume Down -->
+          <button text="🔇" ontap="mute"  color="#50b9fe" weight="wrap" /> <!-- Mute -->
+          <button icon="vup" ontap="volume_up"  color="#50b9fe" /> <!-- Volume Up -->
+      </row>
+      <row>
+        <slider id="vol_slider" onchange="volume" min="0" max="100"  color="#50b9fe" />
+      </row>
+    </tab>
+
+    <!--___________ Plex Tab ___________ --> 
+    <tab text="Plex">
+      <row weight="0.01">
+        <label text="Plex Control" color="transparent" />
+      </row>
+      <row weight="3">
+        <button text="Dashboard" ontap="dashboard" />
+        <button icon="home" ontap="home" />
+        <button icon="config" ontap="settings" />
+      </row>
+      <row weight="0.01">
+        <label text="Window Control" color="transparent" />
+      </row>
+      <row weight="2">
+        <button text="Launch/Focus\nPlex" ontap="launchFocusPlex" onhold="kill_plex" color="yellow" /> <!-- Skip Back -->
+      </row>
+      <row weight="2">
+        <button text="Move to\nPrev Screen" ontap="prevScreen" />
+        <button icon="Fullscreen" ontap="fullscreen" weight="wrap"/>
+        <button text="Move to\nNext Screen" ontap="nextScreen" />
+      </row>
+    </tab>
+    <!--___________ Plex Tab ___________ --> 
+
+  
+    <!--___________ Debug Tab ___________ --> 
+    <tab text="Debug">
+      <row weight="0">
+        <button  text="Hardcoded Variables" textalign="center" /> <!-- Skip Back -->
+      </row>
+      <row weight="0">
+        <button id="plexDetails" text="Plex Path: \nPlex Window: \nPlex Title:" color="transparent" textalign="left" /> <!-- Skip Back -->
+      </row>
+      <row weight="0.01"> <label text="Current Window Info" /> </row>
+      <row weight="4"> 
+        <grid>
+          <row> <label id="winHWND" text="HWND" ontap="get_cur_window" color="transparent" textalign="left"/>  </row>
+          <row> <label id="winTitle" text="Title" ontap="get_cur_window" color="transparent" textalign="left"/>  </row>
+          <row> <label id="winPID" text="PID" ontap="get_cur_window" color="transparent" textalign="left"/>  </row>
+          <row> <label id="winClass" text="Class" ontap="get_cur_window" color="transparent" textalign="left"/>  </row>
+        </grid>
+          <button id="showCurWin" text="Get\nWindow\nInfo" ontap="get_cur_window" textalign="center" weight="0.5"/>  
+      </row>
+      <row weight="1" >
+        <button id="findPlex" text="Find Plex" ontap="find_plex" />
+      </row>
+    </tab>
+    <!--___________ Debug Tab ___________ --> 
+
+  </tabs>
+
+</layout>
