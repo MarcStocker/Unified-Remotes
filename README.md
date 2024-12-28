@@ -23,5 +23,5 @@ Also included tabs for more specific Plex Window control, as well as a debugger.
 - Current Window Info displays details about the current window info.
 - Find Plex returns a value greater than 0 if the window is found. 
 
-<img src="AdvancedMedia/screenshots/1_MediaControl.png" width="255"> <img src="AdvancedMedia/screenshots/2_Plex.png" width="255"> <img src="AdvancedMedia/screenshots/3_Debug.png" width="255">
+<img src="AdvancedMedia/screenshots/1_Media_Control.png" width="255"> <img src="AdvancedMedia/screenshots/2_Plex.png" width="255"> <img src="AdvancedMedia/screenshots/3_Debug.png" width="255">
 
