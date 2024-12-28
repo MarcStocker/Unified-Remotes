@@ -1,7 +1,7 @@
 # Unified-Remotes
 Custom Remotes for Unified-Remote
 
-## Advanced Remote
+## AdvancedMedia Remote
 A more advanced Media remote for navigation, and Volume control. 
 Also included tabs for more specific Plex Window control, as well as a debugger. 
 
