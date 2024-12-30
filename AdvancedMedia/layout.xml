@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout onvolumeup="volume_up" onVolumeDown="volume_down">
-  <tabs>
+  <tabs onchange="tab_update">
     <tab text="Media Control">
       <!-- First Row -->
       <row>
-        <button icon="back" ontap="back" onhold="escape" color="#ebaf00" /> <!-- Back/Return -->
+        <button icon="back" ontap="back" onhold="escape" color="#a7760c" /> <!-- Back/Return -->
         <button icon="up" ontap="up" color="#0383DC" /> <!-- Up -->
-        <button icon="playpause" ontap="play_pause"  onhold="stop" color="#ebaf00" /> <!-- Play/Pause -->
+        <button icon="playpause" ontap="play_pause"  onhold="stop" color="#a7760c" /> <!-- Play/Pause -->
       </row>
 
       <!-- Second Row -->
@@ -18,9 +18,9 @@
 
       <!-- Third Row -->
       <row>
-        <button icon="rwd" ontap="skip_back"  color="#ebaf00" /> <!-- Skip Back -->
+        <button icon="rwd" ontap="skip_back"  color="#a7760c" /> <!-- Skip Back -->
         <button icon="down" ontap="down" color="#0383DC" /> <!-- Down -->
-        <button icon="ff" ontap="skip_forward"  color="#ebaf00" /> <!-- Skip Forward -->
+        <button icon="ff" ontap="skip_forward"  color="#a7760c" /> <!-- Skip Forward -->
       </row>
 
       <!-- Volume Section -->
@@ -51,7 +51,7 @@
         <label text="Window Control" color="transparent" />
       </row>
       <row weight="2">
-        <button text="Launch/Focus\nPlex" ontap="launchFocusPlex" onhold="kill_plex" color="yellow" /> <!-- Skip Back -->
+        <button text="Launch/Focus\nPlex" ontap="launchFocusPlex" onhold="kill_plex" color="#a7760c" /> <!-- Skip Back -->
       </row>
       <row weight="2">
         <button text="Move to\nPrev Screen" ontap="prevScreen" />
