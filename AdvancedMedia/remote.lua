@@ -217,8 +217,10 @@ end
 actions.tab_update = function (index)
     print("/n/nTab #: " .. index);
     if index > 0 then
-        libs.timer.cancel(sync_timer);
-        sync_timer = nil;
+        if sync_timer then
+            libs.timer.cancel(sync_timer);
+            sync_timer = nil;
+        end
     else
         start_periodic_sync(); -- Start periodic syncing
     end
