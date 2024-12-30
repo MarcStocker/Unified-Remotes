@@ -141,7 +141,6 @@ end
 --@help Mute/Unmute
 actions.mute = function()
     kb.press("volumemute");
-    sync_slider_with_system_volume(); -- Sync slider with muted state
 end
 
 -- Navigation Buttons
